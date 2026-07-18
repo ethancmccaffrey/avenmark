@@ -19,125 +19,72 @@
 <body>
 
 <header class="main-header">
-
     <div class="brand">
-
-        <img
-            src="Untitled design.png"
-            alt="Avenmark Logo"
-            class="logo">
-
+        <img src="Untitled design.png" alt="Avenmark Logo" class="logo">
         <h1>Avenmark</h1>
-
     </div>
-
 </header>
 
 
 <main>
 
-<section class="hero">
+    <!-- ============================
+         AVENMARK NEBULA LANDING PAGE
+    ============================= -->
 
-    <div class="hero-content">
+    <section class="nebula-hero">
+        <canvas id="nebulaCanvas"></canvas>
 
-        <p>
-            Avenmark develops clean, modern websites and web tools
-            with a focus on simplicity, usability, and thoughtful design.
-        </p>
-
-    </div>
-
-</section>
-
+        <div class="nebula-logo">
+            <img src="Untitled design.png" alt="Avenmark Logo">
+        </div>
+    </section>
 
 
-<section class="projects">
+    <!-- ============================
+         PROJECTS SECTION (unchanged)
+    ============================= -->
 
-    <div class="section-heading">
+    <section class="projects">
 
-        <h2>Websites</h2>
+        <div class="section-heading">
+            <h2>Websites</h2>
+            <p>Explore projects currently developed and maintained by Avenmark.</p>
+        </div>
 
-        <p>
-            Explore projects currently developed and maintained by Avenmark.
-        </p>
+        <div class="project-grid">
 
-    </div>
+            <a href="https://4h2026.vercel.app/" target="_blank" class="project-card">
+                <h3>Ethan McCaffrey’s 4‑H Campaign HQ</h3>
+                <p>State 4-H campaign website built for Ethan McCaffrey.</p>
+                <span>Visit Website →</span>
+            </a>
 
+            <a href="https://avenmark-code-playground.vercel.app/" target="_blank" class="project-card">
+                <h3>Avenmark Code Playground</h3>
+                <p>Browser-based HTML, CSS and JavaScript playground for learning and experimenting with code.</p>
+                <span>Open Playground →</span>
+            </a>
 
+        </div>
 
-    <div class="project-grid">
-
-
-
-
-        <a
-            href="https://4h2026.vercel.app/"
-            target="_blank"
-            class="project-card">
-
-            <h3>Ethan McCaffrey’s 4‑H Campaign HQ
-</h3>
-
-            <p>
-                State 4-H campaign website built for Ethan McCaffrey.
-            </p>
-
-            <span>Visit Website →</span>
-
-        </a>
-
-
-
-
-
-        <a
-            href="https://avenmark-code-playground.vercel.app/"
-            target="_blank"
-            class="project-card">
-
-            <h3>Avenmark Code Playground</h3>
-
-            <p>
-                Browser-based HTML, CSS and JavaScript playground
-                for learning and experimenting with code.
-            </p>
-
-            <span>Open Playground →</span>
-
-        </a>
-
-
-
-
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
-
 <footer class="main-footer">
-
     <div class="weather">
-
-        <span id="weather">
-            Loading Columbia weather...
-        </span>
-
+        <span id="weather">Loading Columbia weather...</span>
     </div>
 
     <div class="footer-divider"></div>
 
-    <p>
-        Developed By Ethan McCaffrey
-    </p>
-
+    <p>Developed By Ethan McCaffrey</p>
 </footer>
 
-
-
 <script src="script.js"></script>
+<script src="nebula.js"></script>
 
 </body>
 </html>
