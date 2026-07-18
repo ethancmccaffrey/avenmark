@@ -1,0 +1,438 @@
+/* ==========================================================
+   AVENMARK WEBSITE
+   VERSION 1
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#F5F5F2;
+    color:#2F2F2F;
+
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.main-header{
+
+    position:sticky;
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(245,245,242,.88);
+
+    border-bottom:1px solid rgba(47,47,47,.08);
+
+}
+
+.brand{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px 28px;
+
+}
+
+.logo{
+
+    width:56px;
+
+    height:56px;
+
+    object-fit:contain;
+
+}
+
+.brand h1{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    color:#2F2F2F;
+
+    font-size:30px;
+
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:110px 30px 80px;
+
+}
+
+.hero-content{
+
+    max-width:720px;
+
+}
+
+.hero h2{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:clamp(46px,7vw,74px);
+
+    line-height:1.05;
+
+    color:#2F2F2F;
+
+    margin-bottom:28px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+
+/* ==========================================================
+   PROJECT SECTION
+========================================================== */
+
+.projects{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 30px 90px;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+.section-heading h2{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:42px;
+
+    color:#2F2F2F;
+
+    margin-bottom:16px;
+
+}
+
+.section-heading p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+
+}
+
+/* ==========================================================
+   PROJECT CARDS
+========================================================== */
+
+.project-card{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:22px;
+
+    padding:34px;
+
+    border-radius:24px;
+
+    background:#FFFFFF;
+
+    border:1px solid rgba(47,47,47,.06);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.06);
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:
+        transform .30s ease,
+        box-shadow .30s ease,
+        border-color .30s ease;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#C47A45;
+
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.10);
+
+}
+
+.project-card h3{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:28px;
+
+    color:#2F2F2F;
+
+}
+
+.project-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    flex:1;
+
+}
+
+.project-card span{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-weight:700;
+
+    color:#C47A45;
+
+    transition:letter-spacing .25s ease;
+
+}
+
+.project-card:hover span{
+
+    letter-spacing:.6px;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.main-footer{
+
+    margin-top:90px;
+
+    padding:45px 25px;
+
+    border-top:1px solid rgba(47,47,47,.08);
+
+    text-align:center;
+
+    background:#F5F5F2;
+
+}
+
+.weather{
+
+    font-weight:600;
+
+    color:#2F2F2F;
+
+    margin-bottom:18px;
+
+}
+
+.footer-divider{
+
+    width:70px;
+
+    height:2px;
+
+    margin:0 auto 18px;
+
+    background:#C47A45;
+
+    border-radius:999px;
+
+}
+
+.main-footer p{
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+
+/* ==========================================================
+   SIMPLE FADE ANIMATION
+========================================================== */
+
+.hero,
+.projects{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:900px){
+
+    .brand{
+
+        justify-content:center;
+
+        padding:18px;
+
+    }
+
+    .brand h1{
+
+        font-size:24px;
+
+        letter-spacing:3px;
+
+    }
+
+    .hero{
+
+        padding:80px 24px 55px;
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        margin:auto;
+
+    }
+
+    .hero h2{
+
+        font-size:clamp(38px,10vw,56px);
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .logo{
+
+        width:46px;
+        height:46px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .project-card{
+
+        padding:28px;
+
+    }
+
+}
